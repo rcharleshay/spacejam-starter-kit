@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders a child component 1`] = `
+<Appstyle__AppContainer
+  vertical={5}
+>
+  <Head
+    head={
+      Object {
+        "title": "Session | Mon Telus | TELUS.com",
+      }
+    }
+  />
+  <GlobalStyleComponent />
+  <GlobalStyleComponent />
+  <Connect(MapImmutableToPlain)
+    loading={true}
+  />
+</Appstyle__AppContainer>
+`;

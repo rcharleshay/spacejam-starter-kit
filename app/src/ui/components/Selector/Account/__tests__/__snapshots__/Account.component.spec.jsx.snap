@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Account Component renders 1`] = `
+<Connect(MapImmutableToPlain)
+  loading={true}
+>
+  <style__Box
+    horizontal={4}
+  >
+    <Connect(MapImmutableToPlain)
+      accountType="account"
+    />
+    <Connect(MapImmutableToPlain) />
+    <Connect(MapImmutableToPlain) />
+    <style__HairlineDivider />
+    <style__FlexGrid
+      gutter={false}
+      limitWidth={false}
+    >
+      <style__Row>
+        <style__Col
+          lg={5}
+          md={6}
+          xl={3}
+        >
+          <Connect(MapImmutableToPlain) />
+        </style__Col>
+      </style__Row>
+      <style__Row>
+        <style__Col
+          lg={12}
+          md={12}
+          xl={9}
+        >
+          <Connect(MapImmutableToPlain)
+            cards={Array []}
+            onClick={[Function]}
+          />
+        </style__Col>
+      </style__Row>
+    </style__FlexGrid>
+  </style__Box>
+</Connect(MapImmutableToPlain)>
+`;

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Redirect Component renders 1`] = `
+<Connect(MapImmutableToPlain)
+  loading={true}
+>
+  http://www.google.com
+</Connect(MapImmutableToPlain)>
+`;
+
+exports[`Redirect Component renders Redirect without rd params 1`] = `
+<Connect(MapImmutableToPlain)
+  loading={true}
+>
+  /my-telus/overview
+</Connect(MapImmutableToPlain)>
+`;

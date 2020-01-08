@@ -1,0 +1,46 @@
+# Defines the local environment configuration for our application
+#
+# Usage:
+#   docker-compose build
+#   docker-compose up app
+#   docker-compose run app test
+#   docker-compose run e2e
+#   docker-compose run load
+#   docker-compose run lighthouse
+
+version: '3'
+services:
+  app:
+    container_name: my-telus-session
+    build: app
+    environment:
+      - APP_ENV=development
+    ports:
+      - '3000:3000'
+  e2e:
+    container_name: my-telus-session-e2e
+    build: e2e
+    environment:
+      - BASE_URL=http://app:3000
+      - SAUCELABS_ACCESS_KEY=${SAUCELABS_ACCESS_KEY}
+      - SAUCELABS_USERNAME=${SAUCELABS_USERNAME}
+    links:
+      - app
+    volumes:
+      - ./e2e/test/:/app/test/
+  load:
+    container_name: my-telus-session-load
+    build: load-test
+    environment:
+      - APP_ENV=docker
+    links:
+      - app
+  lighthouse:
+    container_name: my-telus-session-lighthouse
+    build: lighthouse-test
+    environment:
+      - BASE_URL=http://app:3000
+    links:
+      - app
+    volumes:
+      - ./lighthouse-test/audit:/app/audit

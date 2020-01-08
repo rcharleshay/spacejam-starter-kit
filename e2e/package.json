@@ -1,0 +1,36 @@
+{
+  "name": "my-telus-session-e2e",
+  "version": "1.0.0",
+  "private": true,
+  "license": "proprietary",
+  "description": "NightWatch.js end to end tests",
+  "author": "TELUS",
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "test": "npm run e2e",
+    "pretest": "npm run lint",
+    "lint": "eslint 'test' --config .eslintrc",
+    "lint:fix": "npm run lint --fix",
+    "e2e": "ENVIRONMENT=${ENVIRONMENT:-local} nightwatch --retries ${E2E_RETRIES:-0} -c ./nightwatch.conf.js --tag Test",
+    "e2e:headless": "ENVIRONMENT=${ENVIRONMENT:-local} nightwatch --retries ${E2E_RETRIES:-0} -c ./nightwatch.conf.js --env headless --tag Test",
+    "e2e:sl": "nightwatch --retries ${E2E_RETRIES:-0} -c ./nightwatch.saucelabs.conf.js -e latestChrome,latestFirefox,latestSafari,edge17,ie11 --tag saucelabs",
+    "e2e:slcustom": "nightwatch --retries ${E2E_RETRIES:-0} -c ./nightwatch.saucelabs.conf.js -e custom --tag saucelabs",
+    "e2e:df_android": "browserName=chrome platformName=android nightwatch -c ./nightwatch.devicefarm.conf.js ",
+    "e2e:df_ios": "browserName=safari platformName=ios nightwatch -c ./nightwatch.devicefarm.conf.js ",
+    "e2e:df_custom": "nightwatch -c ./nightwatch.devicefarm.conf.js "
+  },
+  "dependencies": {
+    "@telus/nightwatch-visual": "^1.4.2",
+    "ajv": "^6.10.0",
+    "chromedriver": "^2.46.0",
+    "nightwatch": "^1.0.19",
+    "nightwatch-accessibility": "^1.8.0",
+    "node-resemble-js": "^0.2.0",
+    "png-crop": "0.0.2"
+  },
+  "devDependencies": {
+    "@telus/eslint-config": "^2.0.1"
+  }
+}

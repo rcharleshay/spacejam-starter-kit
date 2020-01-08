@@ -1,0 +1,37 @@
+{
+  "$id": "page.json#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "name",
+    "type",
+    "brand",
+    "category",
+    "subCategory1",
+    "province",
+    "language"
+  ],
+  "properties": {
+    "name": {
+        "type": "string"
+    },
+    "type": {
+        "type": "string"
+    },
+    "brand": {
+        "type": "string"
+    },
+    "category": {
+        "type": "string"
+    },
+    "subCategory1": {
+        "type": "string"
+    },
+    "province": {
+        "type": "string"
+    },
+    "language": {
+        "type": "string"
+    }
+  }
+}

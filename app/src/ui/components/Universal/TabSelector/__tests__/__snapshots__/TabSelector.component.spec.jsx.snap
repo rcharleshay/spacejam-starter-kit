@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tab Selector Component renders 1`] = `
+<style__Box>
+  <style__FlexGrid
+    limitWidth={false}
+  >
+    <style__Row>
+      <style__Tab>
+        <style__FlexGrid
+          limitWidth={false}
+        >
+          <style__Row>
+            <style__Icon>
+              <DecorativeIcon />
+            </style__Icon>
+            <style__Text
+              data-test="selected-tab-Account"
+            >
+              Account
+            </style__Text>
+          </style__Row>
+        </style__FlexGrid>
+      </style__Tab>
+    </style__Row>
+  </style__FlexGrid>
+</style__Box>
+`;

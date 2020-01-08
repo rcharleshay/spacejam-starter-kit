@@ -1,0 +1,664 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Box Component renders 1`] = `
+<Fragment>
+  <style__Box>
+    <style__SearchForm
+      onSubmit={[Function]}
+    >
+      <style__SearchContainer>
+        <style__Input
+          data-di-mask={true}
+          error={null}
+          hint="Enter your account number below to manage your Account."
+          hintPosition="below"
+          id="account-search"
+          label="Find your account"
+          name="search-input"
+          onChange={[Function]}
+          tooltip={
+            <ForwardRef(style__Tooltip)
+              copy="en"
+              data-test="find-your-account-tooltip"
+            >
+              Can’t find your account number?  
+              <a
+                href="https://www.telus.com/support/article/locate-your-telus-account-number#business"
+                style={
+                  Object {
+                    "color": "#2a2c2e",
+                  }
+                }
+                target="_blank"
+              >
+                 Follow this link 
+              </a>
+               for a few places it could be.
+            </ForwardRef(style__Tooltip)>
+          }
+          value=""
+        />
+        <style__SearchIconContainerEnabled
+          data-test="search-button-enabled"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+          type="submit"
+        >
+          <DecorativeIcon
+            size={32}
+            symbol="spyglass"
+            variant="inverted"
+          />
+        </style__SearchIconContainerEnabled>
+        <style__SearchIconContainerDisabled
+          aria-label="disabled search button"
+          data-test="search-button-disabled"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+          type="submit"
+        >
+          <DecorativeIcon
+            size={32}
+            symbol="spyglass"
+            variant="secondary"
+          />
+        </style__SearchIconContainerDisabled>
+      </style__SearchContainer>
+    </style__SearchForm>
+    <style__Box
+      horizontal={2}
+      style={
+        Object {
+          "display": "none",
+          "paddingLeft": 0,
+        }
+      }
+      vertical={3}
+    >
+      <style__Box
+        between={2}
+        inline={true}
+      >
+        <div
+          style={
+            Object {
+              "marginTop": 3,
+            }
+          }
+        >
+          <style__CoreLink
+            data-test="search-again-link"
+            href="#"
+            onClick={[Function]}
+          >
+            Search again
+          </style__CoreLink>
+        </div>
+      </style__Box>
+    </style__Box>
+  </style__Box>
+</Fragment>
+`;
+
+exports[`Search Box Component renders for account - searchStatus failure 1`] = `
+<Fragment>
+  <style__Box>
+    <style__SearchForm
+      onSubmit={[Function]}
+    >
+      <style__SearchContainer>
+        <style__Input
+          data-di-mask={true}
+          error={
+            Array [
+              "Please enter a valid account number. If you’re sure it’s correct, try  ",
+              <a
+                href="https://www.telus.com/my-account/profile/link"
+                style={
+                  Object {
+                    "color": "#2a2c2e",
+                  }
+                }
+                target="_blank"
+              >
+                 linking your service 
+              </a>,
+            ]
+          }
+          hint="Enter your account number below to manage your Account."
+          hintPosition="below"
+          id="account-search"
+          label="Find your account"
+          name="search-input"
+          onChange={[Function]}
+          tooltip={
+            <ForwardRef(style__Tooltip)
+              copy="en"
+              data-test="find-your-account-tooltip"
+            >
+              Can’t find your account number?  
+              <a
+                href="https://www.telus.com/support/article/locate-your-telus-account-number#business"
+                style={
+                  Object {
+                    "color": "#2a2c2e",
+                  }
+                }
+                target="_blank"
+              >
+                 Follow this link 
+              </a>
+               for a few places it could be.
+            </ForwardRef(style__Tooltip)>
+          }
+          value=""
+        />
+        <style__SearchIconContainerEnabled
+          data-test="search-button-enabled"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+          type="submit"
+        >
+          <DecorativeIcon
+            size={32}
+            symbol="spyglass"
+            variant="inverted"
+          />
+        </style__SearchIconContainerEnabled>
+        <style__SearchIconContainerDisabled
+          aria-label="disabled search button"
+          data-test="search-button-disabled"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+          type="submit"
+        >
+          <DecorativeIcon
+            size={32}
+            symbol="spyglass"
+            variant="secondary"
+          />
+        </style__SearchIconContainerDisabled>
+      </style__SearchContainer>
+    </style__SearchForm>
+    <style__Box
+      horizontal={2}
+      style={
+        Object {
+          "display": "block",
+          "paddingLeft": 0,
+        }
+      }
+      vertical={3}
+    >
+      <style__Box
+        between={2}
+        inline={true}
+      >
+        <div
+          style={
+            Object {
+              "marginTop": 3,
+            }
+          }
+        >
+          <style__CoreLink
+            data-test="search-again-link"
+            href="#"
+            onClick={[Function]}
+          >
+            Search again
+          </style__CoreLink>
+        </div>
+      </style__Box>
+    </style__Box>
+  </style__Box>
+</Fragment>
+`;
+
+exports[`Search Box Component renders for account - searchStatus success 1`] = `
+<Fragment>
+  <style__Box>
+    <style__SearchForm
+      onSubmit={[Function]}
+    >
+      <style__SearchContainer>
+        <style__Input
+          data-di-mask={true}
+          error={null}
+          hint="Enter your account number below to manage your Account."
+          hintPosition="below"
+          id="account-search"
+          label="Find your account"
+          name="search-input"
+          onChange={[Function]}
+          tooltip={
+            <ForwardRef(style__Tooltip)
+              copy="en"
+              data-test="find-your-account-tooltip"
+            >
+              Can’t find your account number?  
+              <a
+                href="https://www.telus.com/support/article/locate-your-telus-account-number#business"
+                style={
+                  Object {
+                    "color": "#2a2c2e",
+                  }
+                }
+                target="_blank"
+              >
+                 Follow this link 
+              </a>
+               for a few places it could be.
+            </ForwardRef(style__Tooltip)>
+          }
+          value=""
+        />
+        <style__SearchIconContainerEnabled
+          data-test="search-button-enabled"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+          type="submit"
+        >
+          <DecorativeIcon
+            size={32}
+            symbol="spyglass"
+            variant="inverted"
+          />
+        </style__SearchIconContainerEnabled>
+        <style__SearchIconContainerDisabled
+          aria-label="disabled search button"
+          data-test="search-button-disabled"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+          type="submit"
+        >
+          <DecorativeIcon
+            size={32}
+            symbol="spyglass"
+            variant="secondary"
+          />
+        </style__SearchIconContainerDisabled>
+      </style__SearchContainer>
+    </style__SearchForm>
+    <style__Box
+      horizontal={2}
+      style={
+        Object {
+          "display": "block",
+          "paddingLeft": 0,
+        }
+      }
+      vertical={3}
+    >
+      <style__Box
+        between={2}
+        inline={true}
+      >
+        <style__Heading
+          data-test="account-found"
+          level="h3"
+        >
+          Account found.
+        </style__Heading>
+        <div
+          style={
+            Object {
+              "marginTop": 3,
+            }
+          }
+        >
+          <style__CoreLink
+            data-test="search-again-link"
+            href="#"
+            onClick={[Function]}
+          >
+            Search again
+          </style__CoreLink>
+        </div>
+      </style__Box>
+    </style__Box>
+  </style__Box>
+</Fragment>
+`;
+
+exports[`Search Box Component renders for searchType Subscriber 1`] = `
+<Fragment>
+  <style__Box>
+    <style__SearchForm
+      onSubmit={[Function]}
+    >
+      <style__SearchContainer>
+        <style__Input
+          data-di-mask={true}
+          error={null}
+          hint="Enter a phone number below to search for a subscriber."
+          hintPosition="below"
+          id="account-search"
+          label="Search for a subscriber"
+          name="search-input"
+          onChange={[Function]}
+          tooltip={
+            <ForwardRef(style__Tooltip)
+              copy="en"
+              data-test="find-your-subscriber-tooltip"
+            >
+              Can’t find the subscriber number? A subscriber number is the same as the mobile # on your bill. Or, you can  
+              <a
+                href="https://www.telus.com/support/article/locate-your-telus-account-number#business"
+                style={
+                  Object {
+                    "color": "#2a2c2e",
+                  }
+                }
+                target="_blank"
+              >
+                 follow this link 
+              </a>
+               for more help.
+            </ForwardRef(style__Tooltip)>
+          }
+          value=""
+        />
+        <style__SearchIconContainerEnabled
+          data-test="search-button-enabled"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+          type="submit"
+        >
+          <DecorativeIcon
+            size={32}
+            symbol="spyglass"
+            variant="inverted"
+          />
+        </style__SearchIconContainerEnabled>
+        <style__SearchIconContainerDisabled
+          aria-label="disabled search button"
+          data-test="search-button-disabled"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+          type="submit"
+        >
+          <DecorativeIcon
+            size={32}
+            symbol="spyglass"
+            variant="secondary"
+          />
+        </style__SearchIconContainerDisabled>
+      </style__SearchContainer>
+    </style__SearchForm>
+    <style__Box
+      horizontal={2}
+      style={
+        Object {
+          "display": "none",
+          "paddingLeft": 0,
+        }
+      }
+      vertical={3}
+    >
+      <style__Box
+        between={2}
+        inline={true}
+      >
+        <div
+          style={
+            Object {
+              "marginTop": 3,
+            }
+          }
+        >
+          <style__CoreLink
+            data-test="search-again-link"
+            href="#"
+            onClick={[Function]}
+          >
+            Search again
+          </style__CoreLink>
+        </div>
+      </style__Box>
+    </style__Box>
+  </style__Box>
+</Fragment>
+`;
+
+exports[`Search Box Component renders for subscriber - searchStatus failure 1`] = `
+<Fragment>
+  <style__Box>
+    <style__SearchForm
+      onSubmit={[Function]}
+    >
+      <style__SearchContainer>
+        <style__Input
+          data-di-mask={true}
+          error="The phone number entered does not match any subscribers on this account. Try a different number."
+          hint="Enter a phone number below to search for a subscriber."
+          hintPosition="below"
+          id="account-search"
+          label="Search for a subscriber"
+          name="search-input"
+          onChange={[Function]}
+          tooltip={
+            <ForwardRef(style__Tooltip)
+              copy="en"
+              data-test="find-your-subscriber-tooltip"
+            >
+              Can’t find the subscriber number? A subscriber number is the same as the mobile # on your bill. Or, you can  
+              <a
+                href="https://www.telus.com/support/article/locate-your-telus-account-number#business"
+                style={
+                  Object {
+                    "color": "#2a2c2e",
+                  }
+                }
+                target="_blank"
+              >
+                 follow this link 
+              </a>
+               for more help.
+            </ForwardRef(style__Tooltip)>
+          }
+          value=""
+        />
+        <style__SearchIconContainerEnabled
+          data-test="search-button-enabled"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+          type="submit"
+        >
+          <DecorativeIcon
+            size={32}
+            symbol="spyglass"
+            variant="inverted"
+          />
+        </style__SearchIconContainerEnabled>
+        <style__SearchIconContainerDisabled
+          aria-label="disabled search button"
+          data-test="search-button-disabled"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+          type="submit"
+        >
+          <DecorativeIcon
+            size={32}
+            symbol="spyglass"
+            variant="secondary"
+          />
+        </style__SearchIconContainerDisabled>
+      </style__SearchContainer>
+    </style__SearchForm>
+    <style__Box
+      horizontal={2}
+      style={
+        Object {
+          "display": "block",
+          "paddingLeft": 0,
+        }
+      }
+      vertical={3}
+    >
+      <style__Box
+        between={2}
+        inline={true}
+      >
+        <div
+          style={
+            Object {
+              "marginTop": 3,
+            }
+          }
+        >
+          <style__CoreLink
+            data-test="search-again-link"
+            href="#"
+            onClick={[Function]}
+          >
+            Search again
+          </style__CoreLink>
+        </div>
+      </style__Box>
+    </style__Box>
+  </style__Box>
+</Fragment>
+`;
+
+exports[`Search Box Component renders for subscriber - searchStatus success 1`] = `
+<Fragment>
+  <style__Box>
+    <style__SearchForm
+      onSubmit={[Function]}
+    >
+      <style__SearchContainer>
+        <style__Input
+          data-di-mask={true}
+          error={null}
+          hint="Enter a phone number below to search for a subscriber."
+          hintPosition="below"
+          id="account-search"
+          label="Search for a subscriber"
+          name="search-input"
+          onChange={[Function]}
+          tooltip={
+            <ForwardRef(style__Tooltip)
+              copy="en"
+              data-test="find-your-subscriber-tooltip"
+            >
+              Can’t find the subscriber number? A subscriber number is the same as the mobile # on your bill. Or, you can  
+              <a
+                href="https://www.telus.com/support/article/locate-your-telus-account-number#business"
+                style={
+                  Object {
+                    "color": "#2a2c2e",
+                  }
+                }
+                target="_blank"
+              >
+                 follow this link 
+              </a>
+               for more help.
+            </ForwardRef(style__Tooltip)>
+          }
+          value=""
+        />
+        <style__SearchIconContainerEnabled
+          data-test="search-button-enabled"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+          type="submit"
+        >
+          <DecorativeIcon
+            size={32}
+            symbol="spyglass"
+            variant="inverted"
+          />
+        </style__SearchIconContainerEnabled>
+        <style__SearchIconContainerDisabled
+          aria-label="disabled search button"
+          data-test="search-button-disabled"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+          type="submit"
+        >
+          <DecorativeIcon
+            size={32}
+            symbol="spyglass"
+            variant="secondary"
+          />
+        </style__SearchIconContainerDisabled>
+      </style__SearchContainer>
+    </style__SearchForm>
+    <style__Box
+      horizontal={2}
+      style={
+        Object {
+          "display": "block",
+          "paddingLeft": 0,
+        }
+      }
+      vertical={3}
+    >
+      <style__Box
+        between={2}
+        inline={true}
+      >
+        <style__Heading
+          data-test="subscriber-found"
+          level="h3"
+        >
+          Subscriber found.
+        </style__Heading>
+        <div
+          style={
+            Object {
+              "marginTop": 3,
+            }
+          }
+        >
+          <style__CoreLink
+            data-test="search-again-link"
+            href="#"
+            onClick={[Function]}
+          >
+            Search again
+          </style__CoreLink>
+        </div>
+      </style__Box>
+    </style__Box>
+  </style__Box>
+</Fragment>
+`;

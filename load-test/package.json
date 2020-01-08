@@ -1,0 +1,21 @@
+{
+  "name": "my-telus-session-load",
+  "version": "1.0.0",
+  "private": true,
+  "license": "proprietary",
+  "description": "Artillery load tests",
+  "author": "TELUS",
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "start": "npm run load && npm run verify",
+    "load": "artillery run -o artillery_report.json -e ${APP_ENV:-'development'} load-test.yml",
+    "report": "artillery report artillery_report.json",
+    "verify": "node verify-load-test.js"
+  },
+  "dependencies": {
+    "artillery": "^1.6.0-27",
+    "expect": "^24.5.0"
+  }
+}

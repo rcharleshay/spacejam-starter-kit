@@ -1,0 +1,15 @@
+.analyze.json
+.babel.json
+.gitignore
+.idea
+bundleInfo.json
+coverage
+dist
+docker-compose.yml
+DOCKER.md
+Dockerfile
+JENKINS.md
+Jenkinsfile
+node_modules
+openshift
+README.md

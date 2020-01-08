@@ -1,0 +1,19 @@
+config:
+  # Do NOT load test open routes (e.g. openshiftapps.com, telus.com) as part of your pipeline.
+  # The production and staging environments can be reached from a load testing pod within the same OpenShift project.
+  environments:
+    production:
+      target: 'http://my-telus-session-production:3000'
+    staging:
+      target: 'http://my-telus-session-staging:3000'
+    docker:
+      target: 'http://app:3000'
+    development:
+      target: 'http://local.telus.com:3000'
+  phases:
+    - duration: 15
+      arrivalRate: 50
+scenarios:
+  - flow:
+    - get:
+        url: "/version"

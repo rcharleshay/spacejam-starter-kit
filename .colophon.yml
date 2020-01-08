@@ -1,0 +1,29 @@
+version: 2.0
+
+ id: my-telus-session
+
+ about:
+  title: My TELUS Account Selector
+  description: TELUS account selecor page enables customer to select billing account number(ban) and subscriber(sub).
+
+ contacts:
+  - type: PO (Squad SpaceJam - B2B)
+    name: Dibya Pal
+    email: dibya.pal@telus.com
+  - type: Senior Developer (Squad SpaceJam - B2B)
+    name: Charlie Hay
+    email: charlie.hay@telus.com
+  - type: Developer (Squad SpaceJam - B2B)
+    name: Swetal Shah
+    email: swetal.shah@telus.com
+
+ environments:
+  - type: production
+    title: Server Openshift Cluster
+    uri: "https://my-telus-session-production-my-telus-session.c1b9.telusdigital.openshiftapps.com"
+  - type: staging
+    title: Server Openshift Cluster
+    uri: "https://my-telus-session-staging-my-telus-session.c1b9.telusdigital.openshiftapps.com"
+  - type: git
+    title: Source Code
+    uri: "https://github.com/telus/my-telus-session"

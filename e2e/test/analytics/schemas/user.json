@@ -1,0 +1,29 @@
+{
+  "$id": "user.json#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "uuid",
+    "loginState",
+    "banType",
+    "customerType",
+    "serviceInstanceId"
+  ],
+  "properties": {
+    "uuid": {
+        "type": "string"
+    },
+    "loginState": {
+        "type": "string"
+    },
+    "banType": {
+        "type": "string"
+    },
+    "customerType": {
+        "type": "string"
+    },
+    "serviceInstanceId": {
+        "type": "string"
+    }
+  }
+}

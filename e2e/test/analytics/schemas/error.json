@@ -1,0 +1,29 @@
+{
+  "$id": "error.json#",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "name",
+    "type",
+    "displayedText",
+    "responseText",
+    "statusCode"
+  ],
+  "properties": {
+    "name": {
+        "type": "string"
+    },
+    "type": {
+        "type": "string"
+    },
+    "displayedText": {
+        "type": "string"
+    },
+    "responseText": {
+        "type": "string"
+    },
+    "statusCode": {
+        "type": "string"
+    }
+  }
+}

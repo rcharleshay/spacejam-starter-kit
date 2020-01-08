@@ -1,0 +1,9 @@
+test/reports/*.xml
+test/failure-screenshots
+!test/failure-screenshots/.gitkeep
+test/visual-regression/*/diffs/*.png
+test/visual-regression/*/results/*.png
+devicelist.json
+node_modules
+.npmrc
+chromedriver.log
