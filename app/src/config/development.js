@@ -58,7 +58,6 @@ const sampleConfig = {
 }
 
 export default {
-  // any non public facing config goes in backend - only available server-side
   backend: {
     locale,
     tagManager,
@@ -67,7 +66,6 @@ export default {
     authorizationProxy,
     errors
   },
-  // public facing config goes in ui - available on both UI and server
   ui: {
     client,
     server,

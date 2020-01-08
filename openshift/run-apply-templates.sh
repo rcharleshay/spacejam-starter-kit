@@ -6,7 +6,7 @@ set -o nounset -o errexit
 
 cd `dirname $0`
 
-CURRENT_BRANCH=`oc get bc my-telus-session-pipeline -o='jsonpath={.spec.source.git.ref}'`
+CURRENT_BRANCH=`oc get bc my-telus-spacejam-pipeline -o='jsonpath={.spec.source.git.ref}'`
 
 oc apply -f openshift-template.yml
-oc process my-telus-session-pipeline BRANCH=${CURRENT_BRANCH} | oc apply -f -
+oc process my-telus-spacejam-pipeline BRANCH=${CURRENT_BRANCH} | oc apply -f -

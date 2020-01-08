@@ -1,12 +1,12 @@
 {
-  "name": "my-telus-session-app",
+  "name": "my-telus-spacejam-app",
   "version": "1.0.0",
   "private": true,
   "license": "proprietary",
   "description": "TELUS account selector app.",
   "author": "TELUS",
   "engines": {
-    "node": ">=8"
+    "node": ">=12"
   },
   "dependencies": {
     "@newrelic/native-metrics": "^4.1.0",

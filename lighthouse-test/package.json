@@ -1,12 +1,12 @@
 {
-  "name": "my-telus-session-lighthouse",
+  "name": "my-telus-spacejam-lighthouse",
   "version": "1.0.0",
   "private": true,
   "license": "proprietary",
   "description": "Telus Lighthouse tests",
   "author": "TELUS",
   "engines": {
-    "node": ">=8"
+    "node": ">=12"
   },
   "scripts": {
     "start": "telus-lighthouse --exit-on-error --base-url=${BASE_URL:-'http://local.telus.com:3000'}"

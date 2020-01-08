@@ -2,7 +2,7 @@
 set -o nounset -o errexit
 
 # Notify NewRelic of a deployment. Used by the Deploy stage of the Jenkinsfile.
-# Usage: NEW_RELIC_API_KEY=abc123 ./run-newrelic-notify.sh my-telus-session staging latest
+# Usage: NEW_RELIC_API_KEY=abc123 ./run-newrelic-notify.sh my-telus-spacejam staging latest
 
 CONTAINER_NAME=${1}
 ENVIRONMENT=${2:-staging}

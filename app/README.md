@@ -164,7 +164,7 @@ A: Yes.
     "name": "Chrome",
     "type": "chrome",
     "request": "launch",
-    "url": "http://local.telus.com:3000/en/bc/hello-world",
+    "url": "http://local.telus.com:3000/my-telus/spacejam",
     "webRoot": "${workspaceRoot}/ui",
     "userDataDir": "${workspaceRoot}/.vscode/chrome",
     "sourceMaps": true

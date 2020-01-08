@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Card Selector Component renders account 1`] = `<Connect(MapImmutableToPlain) />`;
-
-exports[`Card Selector Component renders subscriber 1`] = `<Connect(MapImmutableToPlain) />`;
-
-exports[`Card Selector Component renders subscriber 2`] = `<Connect(MapImmutableToPlain) />`;
-
-exports[`Card Selector Component renders subscriber 3`] = `<withRouter(Redirect) />`;

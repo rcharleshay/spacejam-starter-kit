@@ -8,7 +8,7 @@ const startApplication = (app) => {
   app.listen(3000, () => {
     logger.info(`${projectName} listening on port 3000`)
     if (process.env.APP_ENV === 'development') {
-      logger.info(`App Started on: http://local.telus.com:3000`)
+      logger.info(`App Started on: http://local.telus.com:3000/my-telus/spacejam`)
     }
   })
 }

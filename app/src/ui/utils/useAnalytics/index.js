@@ -6,7 +6,7 @@ const useAnalytics = (category, filter, prov, lang) => {
     if (!window.dataLayer)
       window.dataLayer = {
         page: {
-          name: filter ? `/my-telus/session/${category}/${filter}` : `/my-telus/session/${category}`,
+          name: filter ? `/my-telus/spacejam/${category}/${filter}` : `/my-telus/spacejam/${category}`,
           province: prov,
           language: lang,
           brand: 'all',

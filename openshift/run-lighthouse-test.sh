@@ -6,10 +6,10 @@ set -o nounset -o errexit
 
 ENVIRONMENT=${1:-staging}
 VERSION=${2:-latest}
-IMAGESTREAM=`oc get imagestream my-telus-session-lighthouse -o='jsonpath={.status.dockerImageRepository}'`
-BASE_URL="https://`oc get route my-telus-session-${ENVIRONMENT} -o='jsonpath={.spec.host}'`"
+IMAGESTREAM=`oc get imagestream my-telus-spacejam-lighthouse -o='jsonpath={.status.dockerImageRepository}'`
+BASE_URL="https://`oc get route my-telus-spacejam-${ENVIRONMENT} -o='jsonpath={.spec.host}'`"
 
-oc run my-telus-session-lighthouse-${ENVIRONMENT}-${VERSION} \
+oc run my-telus-spacejam-lighthouse-${ENVIRONMENT}-${VERSION} \
   --image=${IMAGESTREAM}:${VERSION} \
   --rm=true \
   --attach=true \
@@ -18,7 +18,7 @@ oc run my-telus-session-lighthouse-${ENVIRONMENT}-${VERSION} \
   { "apiVersion":"v1",
     "spec":{
       "containers":[{
-        "name": "my-telus-session-lighthouse-'${ENVIRONMENT}'-'${VERSION}'",
+        "name": "my-telus-spacejam-lighthouse-'${ENVIRONMENT}'-'${VERSION}'",
         "image": "'${IMAGESTREAM}':'${VERSION}'",
         "env":[{
           "name":"BASE_URL",

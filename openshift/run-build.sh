@@ -2,7 +2,7 @@
 set -o nounset -o errexit
 
 # Start a container build against a container on OpenShift. Used by the Build stage of the Jenkinsfile.
-# Usage: ./run-build.sh my-telus-session my-tag
+# Usage: ./run-build.sh my-telus-spacejam my-tag
 
 NAME=${1}
 VERSION=${2}

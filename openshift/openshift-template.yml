@@ -4,7 +4,7 @@
 apiVersion: v1
 kind: List
 metadata:
-  name: my-telus-session-pipeline
+  name: my-telus-spacejam-pipeline
 items:
 
 # Configure our Docker App image repository
@@ -12,43 +12,43 @@ items:
 - kind: ImageStream
   apiVersion: v1
   metadata:
-    name: my-telus-session
+    name: my-telus-spacejam
     labels:
-      app: my-telus-session
+      app: my-telus-spacejam
 
 # Configure our Docker e2e image repository
 # https://docs.openshift.com/enterprise/3.2/dev_guide/managing_images.html
 - kind: ImageStream
   apiVersion: v1
   metadata:
-    name: my-telus-session-e2e
+    name: my-telus-spacejam-e2e
     labels:
-      app: my-telus-session
+      app: my-telus-spacejam
 
 # Configure our Docker load test image repository
 # https://docs.openshift.com/enterprise/3.2/dev_guide/managing_images.html
 - kind: ImageStream
   apiVersion: v1
   metadata:
-    name: my-telus-session-load
+    name: my-telus-spacejam-load
     labels:
-      app: my-telus-session
+      app: my-telus-spacejam
 
 # Configure our Docker load test image repository
 # https://docs.openshift.com/enterprise/3.2/dev_guide/managing_images.html
 - kind: ImageStream
   apiVersion: v1
   metadata:
-    name: my-telus-session-lighthouse
+    name: my-telus-spacejam-lighthouse
     labels:
-      app: my-telus-session
+      app: my-telus-spacejam
 
 # Configure our build pipeline template
 # https://docs.openshift.com/enterprise/3.2/dev_guide/templates.html
 - apiVersion: v1
   kind: Template
   metadata:
-    name: my-telus-session-pipeline
+    name: my-telus-spacejam-pipeline
   parameters:
   - name: BRANCH
     description: Branch to build from
@@ -60,14 +60,14 @@ items:
   - apiVersion: v1
     kind: BuildConfig
     metadata:
-      name: my-telus-session-pipeline
+      name: my-telus-spacejam-pipeline
       labels:
-        app: my-telus-session
+        app: my-telus-spacejam
     spec:
       source:
         type: Git
         git:
-          uri: git@github.com:telus/my-telus-session.git
+          uri: git@github.com:telus/my-telus-spacejam.git
           ref: ${BRANCH}
         sourceSecret:
           name: github-secret
@@ -93,14 +93,14 @@ items:
   - kind: BuildConfig
     apiVersion: v1
     metadata:
-      name: my-telus-session
+      name: my-telus-spacejam
       labels:
-        app: my-telus-session
+        app: my-telus-spacejam
     spec:
       source:
         type: Git
         git:
-          uri: git@github.com:telus/my-telus-session.git
+          uri: git@github.com:telus/my-telus-spacejam.git
           ref: ${BRANCH}
         contextDir: app
         sourceSecret:
@@ -124,21 +124,21 @@ items:
       output:
         to:
           kind: ImageStreamTag
-          name: my-telus-session:latest
+          name: my-telus-spacejam:latest
 
   # Configure our Docker e2e container build
   # https://docs.openshift.com/enterprise/3.2/architecture/core_concepts/builds_and_image_streams.html#docker-build
   - kind: BuildConfig
     apiVersion: v1
     metadata:
-      name: my-telus-session-e2e
+      name: my-telus-spacejam-e2e
       labels:
-        app: my-telus-session
+        app: my-telus-spacejam
     spec:
       source:
         type: Git
         git:
-          uri: git@github.com:telus/my-telus-session.git
+          uri: git@github.com:telus/my-telus-spacejam.git
           ref: ${BRANCH}
         contextDir: e2e
         sourceSecret:
@@ -162,20 +162,20 @@ items:
       output:
         to:
           kind: ImageStreamTag
-          name: my-telus-session-e2e:latest
+          name: my-telus-spacejam-e2e:latest
   # Configure our Docker load container build
   # https://docs.openshift.com/enterprise/3.2/architecture/core_concepts/builds_and_image_streams.html#docker-build
   - kind: BuildConfig
     apiVersion: v1
     metadata:
-      name: my-telus-session-load
+      name: my-telus-spacejam-load
       labels:
-        app: my-telus-session
+        app: my-telus-spacejam
     spec:
       source:
         type: Git
         git:
-          uri: git@github.com:telus/my-telus-session.git
+          uri: git@github.com:telus/my-telus-spacejam.git
           ref: ${BRANCH}
         contextDir: load-test
         sourceSecret:
@@ -189,21 +189,21 @@ items:
       output:
         to:
           kind: ImageStreamTag
-          name: my-telus-session-load:latest
+          name: my-telus-spacejam-load:latest
 
   # Configure our Docker lighthouse container build
   # https://docs.openshift.com/enterprise/3.2/architecture/core_concepts/builds_and_image_streams.html#docker-build
   - kind: BuildConfig
     apiVersion: v1
     metadata:
-      name: my-telus-session-lighthouse
+      name: my-telus-spacejam-lighthouse
       labels:
-        app: my-telus-session
+        app: my-telus-spacejam
     spec:
       source:
         type: Git
         git:
-          uri: git@github.com:telus/my-telus-session.git
+          uri: git@github.com:telus/my-telus-spacejam.git
           ref: ${BRANCH}
         contextDir: lighthouse-test
         sourceSecret:
@@ -227,14 +227,14 @@ items:
       output:
         to:
           kind: ImageStreamTag
-          name: my-telus-session-lighthouse:latest
+          name: my-telus-spacejam-lighthouse:latest
 
 # Configure our deployment template
 # https://docs.openshift.com/enterprise/3.2/dev_guide/templates.html
 - apiVersion: v1
   kind: Template
   metadata:
-    name: my-telus-session
+    name: my-telus-spacejam
   parameters:
   - name: VERSION
     value: ''
@@ -256,26 +256,26 @@ items:
   - apiVersion: v1
     kind: DeploymentConfig
     metadata:
-      name: my-telus-session-${ENVIRONMENT}
+      name: my-telus-spacejam-${ENVIRONMENT}
       labels:
-        app: my-telus-session
+        app: my-telus-spacejam
         version: ${VERSION}
     spec:
       replicas: ${{NUM_REPLICAS}}
       template:
         metadata:
           labels:
-            deploymentconfig: my-telus-session-${ENVIRONMENT}
+            deploymentconfig: my-telus-spacejam-${ENVIRONMENT}
         spec:
           containers:
-            - name: my-telus-session
+            - name: my-telus-spacejam
               image: ${DOCKER_REGISTRY}
               imagePullPolicy: Always
               env:
                 - name: APP_ENV
                   value: ${ENVIRONMENT}
                 - name: NEW_RELIC_APP_NAME
-                  value: "my-telus-session (${ENVIRONMENT})"
+                  value: "my-telus-spacejam (${ENVIRONMENT})"
                 - name: NEW_RELIC_ENABLED
                   value: 'true'
                 - name: NEW_RELIC_LICENSE_KEY
@@ -371,31 +371,31 @@ items:
   - apiVersion: v1
     kind: Service
     metadata:
-      name: my-telus-session-${ENVIRONMENT}
+      name: my-telus-spacejam-${ENVIRONMENT}
       labels:
-        app: my-telus-session
+        app: my-telus-spacejam
     spec:
       ports:
         - name: app
           port: 3000
           targetPort: 3000
       selector:
-        deploymentconfig: my-telus-session-${ENVIRONMENT}
+        deploymentconfig: my-telus-spacejam-${ENVIRONMENT}
 
   # How the app container is exposed
   # https://docs.openshift.com/enterprise/3.2/dev_guide/routes.html
   - apiVersion: v1
     kind: Route
     metadata:
-      name: my-telus-session-${ENVIRONMENT}
+      name: my-telus-spacejam-${ENVIRONMENT}
       labels:
-        app: my-telus-session
+        app: my-telus-spacejam
       annotations:
         haproxy.router.openshift.io/disable_cookies: 'true'
     spec:
       to:
         kind: Service
-        name: my-telus-session-${ENVIRONMENT}
+        name: my-telus-spacejam-${ENVIRONMENT}
         weight: 100
       port:
         targetPort: 3000
@@ -408,14 +408,14 @@ items:
   - apiVersion: autoscaling/v1
     kind: HorizontalPodAutoscaler
     metadata:
-      name: my-telus-session-${ENVIRONMENT}
+      name: my-telus-spacejam-${ENVIRONMENT}
       labels:
-        app: my-telus-session
+        app: my-telus-spacejam
     spec:
       scaleTargetRef:
         apiVersion: v1
         kind: DeploymentConfig
-        name: my-telus-session-${ENVIRONMENT}
+        name: my-telus-spacejam-${ENVIRONMENT}
       minReplicas: ${{NUM_REPLICAS}}
       maxReplicas: ${{MAX_REPLICAS}}
       targetCPUUtilizationPercentage: 80

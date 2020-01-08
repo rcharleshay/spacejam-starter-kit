@@ -30,7 +30,7 @@ openshift-jenkins-starter-kit/openshift/install.sh
 
 Once your Jenkins is running, we can launch our pipeline on the project:
 ```bash
-my-telus-session/openshift/install.sh <branchname:optional>
+my-telus-spacejam/openshift/install.sh <branchname:optional>
 ```
 
 ### Setup webhook
@@ -39,7 +39,7 @@ The OpenShift webhook triggers the pipeline to build for each commit to GitHub.
 
 To get the webhook URL:
 ```bash
-oc describe bc my-telus-session-pipeline
+oc describe bc my-telus-spacejam-pipeline
 ```
 
 Under GitHub settings for your repository, click `Webhooks`, and add an `application/json` webhook to `push` to the URL.
@@ -48,7 +48,7 @@ Under GitHub settings for your repository, click `Webhooks`, and add an `applica
 
 If you are testing on sandbox, you may want to delete your project and all of its assets. This can be done in one command:
 ```bash
-oc delete all -l=app=my-telus-session
+oc delete all -l=app=my-telus-spacejam
 ```
 
 *NOTE*: With great power, comes great responsibility...

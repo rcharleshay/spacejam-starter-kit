@@ -6,7 +6,7 @@ telusLighthouse:
     # Application name is used to prefix audit report filenames.
     appName: staging
     # Base URL at which the application may be accessed for auditing.
-    baseURL: "https://my-telus-session-staging-telus-lighthouse.7dbd.telusdigitalsandbox.openshiftapps.com"
+    baseURL: "https://my-telus-spacejam-staging-telus-lighthouse.7dbd.telusdigitalsandbox.openshiftapps.com"
     # Create an entry below for each application path to audit. The
     # 'path' key is *required*
     # open:audit will open the latest same number of files as the length of pages.

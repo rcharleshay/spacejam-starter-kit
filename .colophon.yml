@@ -1,6 +1,6 @@
 version: 2.0
 
- id: my-telus-session
+ id: my-telus-spacejam
 
  about:
   title: My TELUS Account Selector
@@ -20,10 +20,10 @@ version: 2.0
  environments:
   - type: production
     title: Server Openshift Cluster
-    uri: "https://my-telus-session-production-my-telus-session.c1b9.telusdigital.openshiftapps.com"
+    uri: "https://my-telus-spacejam-production-my-telus-spacejam.c1b9.telusdigital.openshiftapps.com"
   - type: staging
     title: Server Openshift Cluster
-    uri: "https://my-telus-session-staging-my-telus-session.c1b9.telusdigital.openshiftapps.com"
+    uri: "https://my-telus-spacejam-staging-my-telus-spacejam.c1b9.telusdigital.openshiftapps.com"
   - type: git
     title: Source Code
-    uri: "https://github.com/telus/my-telus-session"
+    uri: "https://github.com/telus/my-telus-spacejam"

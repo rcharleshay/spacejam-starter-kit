@@ -27,5 +27,5 @@ oc create secret generic "e2e-password-secret" \
 
 # Apply and execute the OpenShift template
 oc apply -f openshift-template.yml
-oc process my-telus-session-pipeline BRANCH=${BRANCH} | oc apply -f -
-oc start-build my-telus-session-pipeline
+oc process my-telus-spacejam-pipeline BRANCH=${BRANCH} | oc apply -f -
+oc start-build my-telus-spacejam-pipeline

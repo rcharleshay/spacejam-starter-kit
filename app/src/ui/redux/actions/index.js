@@ -1,12 +1,1 @@
-export {
-  postAccountInSessionAction,
-  reselectAccountAction,
-  localSearchAction,
-  clearSearchAction,
-  apiSearchAction,
-  stopLoadingAction,
-  postSubscribersAction,
-  postSubscriberInSessionAction,
-  setSubscribersFetchedAction,
-  changeContextAction
-} from './app.action'
+export const INITIALIZE_APP_FROM_SERVER = 'INITIALIZE_APP_FROM_SERVER'

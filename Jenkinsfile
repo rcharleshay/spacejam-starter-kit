@@ -51,7 +51,7 @@ try {
     //   failFast: true,
     //   'Build App':{
     build(
-      name: 'my-telus-session',
+      name: 'my-telus-spacejam',
       buildVersion: buildVersion,
       gitCommitId: gitCommitId
     )
@@ -59,14 +59,14 @@ try {
       // }
       // 'Build E2E Test':{
       //   build(
-      //     name: 'my-telus-session-e2e',
+      //     name: 'my-telus-spacejam-e2e',
       //     buildVersion: buildVersion,
       //     gitCommitId: gitCommitId
       //   )
       // },
       // 'Build Load Test':{
       //   build(
-      //     name: 'my-telus-session-load',
+      //     name: 'my-telus-spacejam-load',
       //     buildVersion: buildVersion,
       //     gitCommitId: gitCommitId
       //   )
@@ -85,7 +85,7 @@ try {
    */
   stage('Test') {
    test(
-     name: 'my-telus-session',
+     name: 'my-telus-spacejam',
      buildVersion: buildVersion
    )
   }
@@ -251,7 +251,7 @@ def deploy(Map attrs) {
     unstash 'scripts'
     sh("""
       ./openshift/run-deploy.sh ${attrs.environment} ${attrs.buildVersion} ${attrs.numReplicas}
-      ./openshift/run-newrelic-notify.sh my-telus-session ${attrs.environment} ${attrs.buildVersion}
+      ./openshift/run-newrelic-notify.sh my-telus-spacejam ${attrs.environment} ${attrs.buildVersion}
     """)
   }
 }
@@ -292,7 +292,7 @@ def notifyBuild(Map attrs) {
       color: attrs.color,
       message: "_${env.JOB_NAME}_ <${url}|${attrs.buildVersion}>\n*${attrs.message}* :${attrs.emoji}:\n```${attrs.gitCommitMsg}```",
       teamDomain: 'telusdigital',
-      channel: 'my-telus-session-builds',
+      channel: 'my-telus-spacejam-builds',
       token: env.SLACK_TOKEN
     )
   }

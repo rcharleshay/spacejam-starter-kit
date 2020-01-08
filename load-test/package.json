@@ -1,12 +1,12 @@
 {
-  "name": "my-telus-session-load",
+  "name": "my-telus-spacejam-load",
   "version": "1.0.0",
   "private": true,
   "license": "proprietary",
   "description": "Artillery load tests",
   "author": "TELUS",
   "engines": {
-    "node": ">=8"
+    "node": ">=12"
   },
   "scripts": {
     "start": "npm run load && npm run verify",

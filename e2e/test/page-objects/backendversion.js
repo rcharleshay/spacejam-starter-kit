@@ -7,7 +7,7 @@ module.exports = {
       selector: 'h1'
     },
     gotoHelloWorldLink: {
-      selector: 'a[href="/en/on/hello-world/"]'
+      selector: 'a[href="/my-telus/spacejam"]'
     }
   },
   commands: [

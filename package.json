@@ -1,12 +1,12 @@
 {
-  "name": "my-telus-session",
+  "name": "my-telus-spacejam",
   "version": "1.0.0",
   "private": true,
   "license": "proprietary",
-  "description": "TELUS Isomorphic Starter Kit",
+  "description": "TELUS Isomorphic Starter Kit for Spacejam",
   "author": "TELUS",
   "engines": {
-    "node": ">=8"
+    "node": ">=12"
   },
   "config": {
     "commitizen": {

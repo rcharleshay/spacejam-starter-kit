@@ -10,7 +10,7 @@ module.exports = {
       selector: 'h1'
     },
     checkBackendVersionLink: {
-      selector: 'a[href="/en/on/hello-world/backend-version"]'
+      selector: 'a[href="/my-telus/spacejam"]'
     }
   },
   commands: [

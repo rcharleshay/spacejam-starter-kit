@@ -3,9 +3,9 @@ config:
   # The production and staging environments can be reached from a load testing pod within the same OpenShift project.
   environments:
     production:
-      target: 'http://my-telus-session-production:3000'
+      target: 'http://my-telus-spacejam-production:3000'
     staging:
-      target: 'http://my-telus-session-staging:3000'
+      target: 'http://my-telus-spacejam-staging:3000'
     docker:
       target: 'http://app:3000'
     development:

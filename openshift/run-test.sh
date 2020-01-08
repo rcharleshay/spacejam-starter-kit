@@ -2,7 +2,7 @@
 set -o nounset -o errexit
 
 # Runs `npm run test` against a container on OpenShift. Used by the Test stage of the Jenkinsfile.
-# Usage: ./run-test.sh my-telus-session latest
+# Usage: ./run-test.sh my-telus-spacejam latest
 
 CONTAINER_NAME=${1}
 VERSION=${2:-latest}

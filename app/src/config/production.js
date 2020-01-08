@@ -35,7 +35,7 @@ const locale = {
   matchUriToLocale: false
 }
 
-const tagManager = "//assets.adobedtm.com/launch-EN65f579f00cb04596bfa8bad1911ad8fa.min.js"
+const tagManager = '//assets.adobedtm.com/launch-EN65f579f00cb04596bfa8bad1911ad8fa.min.js'
 
 const globalElementsApi = {
   base: 'https://cdn.telus.digital/global/elements/v2',
@@ -60,7 +60,6 @@ const sampleConfig = {
 }
 
 export default {
-  // any non public facing config goes in backend - only available server-side
   backend: {
     locale,
     tagManager,
@@ -69,7 +68,6 @@ export default {
     authorizationProxy,
     errors
   },
-  // public facing config goes in ui - available on both UI and server
   ui: {
     client,
     server,

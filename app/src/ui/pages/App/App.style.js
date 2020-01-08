@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Box from '@tds/core-box'
 
-export const AppContainer = styled(Box)({
+export const Wrapper = styled(Box)({
   display: 'flex',
   justifyContent: 'stretch',
   minHeight: '100vh',

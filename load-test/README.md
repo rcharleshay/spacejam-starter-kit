@@ -8,7 +8,7 @@ This test is run as part of the build pipeline, to test staging, before the buil
 
 ### 1. Using Docker
 
-We recommend that developers build and test using the [Docker](https://github.com/telus/my-telus-session/blob/master/DOCKER.md) environment. This ensures that your environment is set up the same as other developers and production environments. "Works for me" should mean "works for everyone". Developing with local Node is possible, but your environment may differ from other people.
+We recommend that developers build and test using the [Docker](https://github.com/telus/my-telus-spacejam/blob/master/DOCKER.md) environment. This ensures that your environment is set up the same as other developers and production environments. "Works for me" should mean "works for everyone". Developing with local Node is possible, but your environment may differ from other people.
 
 To run a load test locally with Docker, you can run (from the root directory):
 ```

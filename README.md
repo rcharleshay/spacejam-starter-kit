@@ -1,9 +1,6 @@
-# my-telus-session
+# my-telus-spacejam
 
-TELUS account selecor page enables customer to select their account and service as desired.
-
-Once a selection is made, this page will call session API to temporary store the selected account information,
-and users will be redirected back to the page they come from.
+Starter kit for Team Spacejam.
 
 ## Access
 
@@ -12,8 +9,8 @@ New developers will need to go through [delivery onboarding][delivery-wiki].
 Once onboarded, you can clone this repository locally, and run the initialization script:
 
 ```bash
-git clone git@github.com:telus/my-telus-session.git
-cd my-telus-session
+git clone git@github.com:telus/my-telus-spacejam.git
+cd my-telus-spacejam
 ./init.sh
 ```
 
@@ -21,9 +18,7 @@ cd my-telus-session
 ## Run
 
 Locally, this application is exposed on:
-mobility: http://local.telus.com:3000/my-telus-session/mobility
-wireline: http://local.telus.com:3000/my-telus-session/business-wireline
-solutions: http://local.telus.com:3000/my-telus-session/home-solutions
+mobility: http://local.telus.com:3000/my-telus/spacejam
 
 Node.js development environment with hot reloading (see [package.json][package.json]):
 
@@ -92,7 +87,7 @@ shippy create project project-name
 To create a pipeline for this app in the selected project & environment:
 
 ```bash
-shippy create pipeline my-telus-session
+shippy create pipeline my-telus-spacejam
 ```
 
 This pipeline will be automatically executed in OpenShift. You should see your repository deployed within a few minutes.
@@ -102,52 +97,10 @@ To modify your build pipeline, edit the [Jenkinsfile][jenkinsfile].
 Finally, to set up a GitHub webhook so that all commits will trigger the pipeline:
 
 ```bash
-shippy create webhook my-telus-session
+shippy create webhook my-telus-spacejam
 ```
 
 _Advanced_: power users can perform [manual OpenShift installation][openshift].
-
-## Session Middleware Implementation
-
-Step 1: Install my-telus-client-utils into your app
-
-```
-npm i --save @telus/my-telus-client-utils
-```
-
-Step 2: Import session middleware into registerServerSideMiddleware.js
-
-```
-import sessionMiddleware from '@telus/my-telus-client-utils/lib/sessionMiddleware'
-```
-
-Step 3: Use session middleware in app and handle logic using callback.
-
-The callback receives 6 arguments:
-**err**: If the session api call fails, err will return an object with message field describing error.
-**req**: The Express request object.
-**res**: The Express response object.
-**next**: The Express middleware next function.
-**session**: The object returned from the session api.
-**base**: The base url. (Used to redirect the user to the account selector based on environment.)
-
-Example Implementation:
-
-```
-  app.use(sessionMiddleware(({ err, req, res, next, session, base }) => {
-   // Handle errors
-    if(err) return logger.error(err.message)
-
-    // Using Ramda, we get the subscriber from session (Mobility)
-    if(pathOr(false, ['mobility', 'subscriber'])(session)) {
-      store.dispatch({type: 'SET_SESSION', value: session })
-      return next()
-    }
-
-    // If no subscriber is found, we redirect to the my-telus-session.
-    return res.redirect(`${base}/mobility`)
-  }))
-```
 
 ## Clone
 

@@ -1,12 +1,12 @@
 {
-  "name": "my-telus-session-e2e",
+  "name": "my-telus-spacejam-e2e",
   "version": "1.0.0",
   "private": true,
   "license": "proprietary",
   "description": "NightWatch.js end to end tests",
   "author": "TELUS",
   "engines": {
-    "node": ">=8"
+    "node": ">=12"
   },
   "scripts": {
     "test": "npm run e2e",

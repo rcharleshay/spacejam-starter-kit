@@ -6,9 +6,9 @@ set -o nounset -o errexit
 
 ENVIRONMENT=${1:-staging}
 VERSION=${2:-latest}
-IMAGESTREAM=`oc get imagestream my-telus-session-load -o='jsonpath={.status.dockerImageRepository}'`
+IMAGESTREAM=`oc get imagestream my-telus-spacejam-load -o='jsonpath={.status.dockerImageRepository}'`
 
-oc run my-telus-session-load-${ENVIRONMENT}-${VERSION} \
+oc run my-telus-spacejam-load-${ENVIRONMENT}-${VERSION} \
   --image=${IMAGESTREAM}:${VERSION} \
   --rm=true \
   --attach=true \
@@ -17,7 +17,7 @@ oc run my-telus-session-load-${ENVIRONMENT}-${VERSION} \
   { "apiVersion":"v1",
     "spec":{
       "containers":[{
-        "name": "my-telus-session-load-'${ENVIRONMENT}'-'${VERSION}'",
+        "name": "my-telus-spacejam-load-'${ENVIRONMENT}'-'${VERSION}'",
         "image": "'${IMAGESTREAM}':'${VERSION}'",
         "env":[{
           "name":"APP_ENV",
